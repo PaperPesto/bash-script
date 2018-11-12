@@ -1,0 +1,10 @@
+# Syntax: highest4 [filename] [howmany] [-h --header]
+# Exercise from pag.92
+
+# if filename is undefined the shell print "filename missing" to sderr and stops the script
+filename=$1
+filename=${filename:?"filename missing."}
+
+cat filename
+
+

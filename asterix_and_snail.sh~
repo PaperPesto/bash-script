@@ -1,0 +1,27 @@
+echo "We'll see the role of asterix and snail (at) special variables."
+
+echo "Asterix contains a single string repsenting all the input parameters concatenated."
+echo "IFS is the Internal Field Separator and it modifies how positional parameters are listed up."
+
+# $* is a single string that lists all of the input parameters.
+
+echo "Example for $*."
+echo "Standard IFS"
+echo "$*"
+echo "IFS=,"
+IFS=,
+echo "$*"
+
+
+echo "Snail, instead, is used to store the input parameters as a list of strings."
+
+# $@ is a vector of strings, each of them is a parameter input
+
+# Function that counts input arguments
+function countargs
+{
+    echo "Number of arguments passed to countargs: $#"
+    }
+
+countargs $*
+countargs $@

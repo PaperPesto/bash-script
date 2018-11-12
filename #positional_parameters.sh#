@@ -1,0 +1,5 @@
+echo Welcome stranger, this is the $0 tool.
+echo You have inserted $# arguments.
+echo First argument is $1
+echo Second ar
+

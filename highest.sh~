@@ -1,0 +1,10 @@
+# Syntax: highest [filename] [howmany]
+# Exercise from pag.92
+
+# if filename is undefined the shell print "filename missing" to sderr and stops the script
+filename=$1
+filename=${filename:?"filename missing."}
+# howmany is setted to -10 if undefined by user
+howmany=${howmany:-10}
+
+sort -nr $filename | head -$howmany

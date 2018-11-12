@@ -1,0 +1,19 @@
+# 1
+# A is defined and echo returns its value instead D_A
+A="defined variable"
+D_A="default value for A"
+echo "${A:-$D_A}"
+
+# 2a
+# B is not initially defined
+D_B="default value for B"
+echo "${B:-$D_B}"
+
+# 2b
+# B is not initially defined
+echo "${B:-"B is not defined"}"
+
+# 3
+# C is not defined
+echo "${C:="Now C is defined by string operators"}"
+echo $C
