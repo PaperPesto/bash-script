@@ -1,0 +1,17 @@
+#!/bin/bash
+
+MC_SERVER="MOCKSERVER"
+MC_USER="MOCKUSER"
+MC_PASSWD="MOCKPWD"
+DOWNLOAD_TO="/home/pi/"
+
+DOWNLOG="/home/pi/MC_scripts/down.log"
+
+MAPCRAFTER="/home/pi/mapcrafter/src"
+
+function refrender {
+	if [ $3 -eq 0 ]; then
+		wget -o $DOWNLOG -nH -N -r -P $DOWNLOAD_TO ftp://$MC_USER:"$MC_PASSWD"@$MC_SERVER/"$1"
+	fi
+	$MAPCRAFTER/mapcrafter -j $2 -c $MAPCRAFTER/"$1"_render.config.txt
+}
