@@ -1,0 +1,5 @@
+waiting user input...
+pippo
+maialeYou input server 'pippo' and 'maiale' on '05/20/2021 16:15:05'
+
+PS C:\Projects\bash-script\powershell> 
