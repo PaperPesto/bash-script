@@ -1,0 +1,11 @@
+# Per cambiare referenza ad un branch
+git branch -g <branch_name> <commit_hash>
+
+# Configurazione globale per disattivazione ssl
+git config --global http.sslVerify false
+
+# Per tornare indietro di un commit
+git commit --amend
+
+# Per cherry pickare dal commit A al commit B della stessa catena
+git cherry-pick A^.. B
